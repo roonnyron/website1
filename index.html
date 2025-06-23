@@ -514,13 +514,13 @@
                 </a>
               </div>
               <div class="col-md-4">
-                <a href="">
+                <a href="#" onclick="copyEmail()">
                   <div class="item ">
                     <div class="img-box">
                       <i class="fa fa-envelope" aria-hidden="true"></i>
                     </div>
                     <p>
-                      demo@gmail.com
+                      Jerah.Corp@gmail.com
                     </p>
                   </div>
                 </a>
@@ -576,5 +576,14 @@
 
 
 </body>
-
+  <script>
+    function copyEmail() {
+      const email = "Jerah.Corp@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        alert("Email copied to clipboard!");
+      }).catch(err => {
+        alert("Failed to copy email.");
+      });
+    }
+  </script>
 </html>
